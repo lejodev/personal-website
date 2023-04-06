@@ -4,8 +4,8 @@ import styles from "../styles/Temp.module.css";
 const Temp = () => {
   return (
     <div className={styles.cartel}>
-      <p>Hi. Soon you will see my personal webpage here!. </p>
-      <p>It's under construction</p>
+      <p>Hi. Soon you will see my personal webpage here. </p>
+      <p>It&apos;s under construction</p>
     </div>
   );
 };
