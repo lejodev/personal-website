@@ -6,6 +6,7 @@ const Temp = () => {
     <div className={styles.cartel}>
       <p>Hi. Soon you will see my personal webpage here. </p>
       <p>It&apos;s under construction</p>
+      <footer className={styles.footer}>Alejandro Rincon 2023</footer>
     </div>
   );
 };
