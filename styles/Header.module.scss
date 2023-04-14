@@ -1,0 +1,18 @@
+.header {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  box-sizing: border-box;
+  z-index: -2;
+  .image {
+    object-fit: cover;
+  }
+}
+
+.cartel .footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: x-small;
+}
