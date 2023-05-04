@@ -3,7 +3,7 @@ import styles from "../styles/Header.module.scss";
 import Image from "next/image";
 import headerImage from "../public/images/bannersun.jpg";
 
-const Temp = () => {
+const Header = () => {
   return (
     <div className={styles.header}>
       <Image
@@ -15,11 +15,9 @@ const Temp = () => {
         fill
         sizes="100vw"
       />
-      <p>Hi. Soon you will see my personal webpage here. </p>
-      <p>It&apos;s under construction</p>
-      <footer className={styles.footer}>Alejandro Rincon 2023</footer>
+      <div className={styles.layer}></div>
     </div>
   );
 };
 
-export default Temp;
+export default Header;

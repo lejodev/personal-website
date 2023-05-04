@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/NavBar.module.scss";
+import Image from "next/image";
+import arvlogo from "../public/images/arvlogo.png";
+import Link from "next/link";
 
 const NavBar = () => {
   const [navActive, setNavActive] = useState(false);
@@ -11,8 +14,16 @@ const NavBar = () => {
 
   return (
     <div className={styles.navbar}>
-      <div className={styles["name-logo"]}>Alejandro Rincon</div>
-      <nav>
+      <div className={styles["logo-container"]}>
+        <Link href="/">
+          <Image
+            className={styles["logo"]}
+            alt="Alejandro Rincón Dev"
+            src={arvlogo}
+          />
+        </Link>
+      </div>
+      <nav className={styles.nav}>
         <div
           className={
             navActive
@@ -21,11 +32,21 @@ const NavBar = () => {
           }
         >
           <ul className={styles.menu}>
-            <li className={styles["menu-item"]}>Inicio</li>
-            <li className={styles["menu-item"]}>Quién soy</li>
-            <li className={styles["menu-item"]}>Portafolio</li>
-            <li className={styles["menu-item"]}>Servicios</li>
-            <li className={styles["menu-item"]}>Contacto</li>
+            <li className={styles["menu-item"]}>
+              <Link href="/">Inicio</Link>
+            </li>
+            <li className={styles["menu-item"]}>
+              <Link href="/aboutMe">Quién soy</Link>
+            </li>
+            <li className={styles["menu-item"]}>
+              <Link href="/portfolio">Portafolio</Link>
+            </li>
+            <li className={styles["menu-item"]}>
+              <Link href="/services">Servicios</Link>
+            </li>
+            <li className={styles["menu-item"]}>
+              <Link href="/contact">Contacto</Link>
+            </li>
           </ul>
         </div>
         <div className={styles["burger-menu"]} onClick={handleClick}>

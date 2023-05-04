@@ -1,0 +1,73 @@
+.footer {
+  height: 40vh;
+  width: 100%;
+  background-color: rgb(79, 107, 134);
+  font-size: 1.1em;
+  display: grid;
+  grid-template-areas:
+    "info  social menu"
+    "lower-menu lower-menu lower-menu ";
+  grid-template-columns: 3fr repeat(2, 1fr);
+  grid-template-rows: 3fr 1fr;
+  color: white;
+  .footer-item {
+    padding: 10px;
+  }
+  .info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .image {
+      height: 80%;
+      width: 40%;
+    }
+    .text-container {
+      .text {
+        width: 70%;
+      }
+    }
+  }
+  .social {
+    grid-area: "social";
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    .socials-list-container {
+      .socials-list {
+        list-style: none;
+      }
+    }
+  }
+  .menu {
+    grid-area: menu;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    .menu-list-container {
+      .menu-list {
+        list-style: none;
+      }
+    }
+  }
+  .lower-menu {
+    grid-area: lower-menu;
+    display: flex;
+    background-color: #234;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    .lower-menu-list {
+      width: 50%;
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+    }
+    .lower-menu-social-icons {
+      width: 50%;
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+    }
+  }
+}
