@@ -27,7 +27,7 @@ const Services = () => {
         más personas y crecer tu negocio o presencia online
       </p>
       <span>Te ha interesado?</span>
-      <button>Contáctame</button>
+      <button className={styles.button}>Contáctame</button>
     </div>
   );
 };

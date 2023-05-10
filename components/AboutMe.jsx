@@ -8,7 +8,7 @@ const AboutMe = () => {
       <h1 className={styles.title}>
         <span className={styles["title-span"]}>SOY ALEJANDRO RINCÓN</span>
         <span className={styles["title-span-services"]}>
-          DESARROLLO DE SOLUCIONES WEB
+          DESARROLLADOR DE SOLUCIONES WEB
         </span>
       </h1>
       <p className={styles["aboutme-description"]}>
@@ -16,7 +16,9 @@ const AboutMe = () => {
         forma profesional. Haciendo su día a día más efectivo, permieitnedo que
         logren sus objetivos.
       </p>
-      <button><Link href="/aboutMe">More about me</Link></button>
+      <button className={styles.button}>
+        <Link href="/aboutMe">More about me</Link>
+      </button>
     </div>
   );
 };

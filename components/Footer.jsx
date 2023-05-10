@@ -26,9 +26,17 @@ const Footer = () => {
         <h5 className={`${styles["footer-title"]}`}>Encuéntrame en</h5>
         <div className={styles["socials-list-container"]}>
           <ul className={styles["socials-list"]}>
-            <li className={styles["social-item"]}>Twitter</li>
-            <li className={styles["social-item"]}>Linkedin</li>
-            <li className={styles["social-item"]}>Github</li>
+            <li className={styles["social-item"]}>
+              <Link href="https://twitter.com/Alejandro_RV8">Twitter</Link>
+            </li>
+            <li className={styles["social-item"]}>
+              <Link href="https://www.linkedin.com/in/alejandro-rincon-vera-4810b615a/">
+                Linkedin
+              </Link>
+            </li>
+            <li className={styles["social-item"]}>
+              <Link href="https://github.com/lejodev">Github</Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -46,19 +54,25 @@ const Footer = () => {
       <div className={`${styles["lower-menu"]} ${styles["footer-item"]}`}>
         <ul className={styles["lower-menu-list"]}>
           <li className={styles["lower-menu-item"]}>Quién soy</li>
-          <li className={styles["lower-menu-item"]}>Portafolio</li>
+          {/* <li className={styles["lower-menu-item"]}>Portafolio</li> */}
           <li className={styles["lower-menu-item"]}>Servicios</li>
           <li className={styles["lower-menu-item"]}>Contacto</li>
         </ul>
         <ul className={styles["lower-menu-social-icons"]}>
           <li className={styles["lower-menu-item"]}>
-            <Link href="https://twitter.com/Alejandro_RV8"><BsTwitter /></Link>
+            <Link href="https://twitter.com/Alejandro_RV8">
+              <BsTwitter />
+            </Link>
           </li>
           <li className={styles["lower-menu-item"]}>
-            <BsLinkedin />
+            <Link href="https://www.linkedin.com/in/alejandro-rincon-vera-4810b615a/">
+              <BsLinkedin />
+            </Link>
           </li>
           <li className={styles["lower-menu-item"]}>
-            <BsGithub />
+            <Link href="https://github.com/lejodev">
+              <BsGithub />
+            </Link>
           </li>
         </ul>
       </div>

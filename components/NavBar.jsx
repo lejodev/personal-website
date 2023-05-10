@@ -6,6 +6,23 @@ import Link from "next/link";
 
 const NavBar = () => {
   const [navActive, setNavActive] = useState(false);
+
+  //Set background color for navBar
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 90) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", changeColor);
+  }, []);
+
+  //Handle mobile nav
   const handleClick = () => {
     console.log("GREAT");
     console.log(navActive);
@@ -13,7 +30,13 @@ const NavBar = () => {
   };
 
   return (
-    <div className={styles.navbar}>
+    <div
+      className={
+        scrolled
+          ? `${styles.navbar} ${styles["change-background-color"]}`
+          : styles.navbar
+      }
+    >
       <div className={styles["logo-container"]}>
         <Link href="/">
           <Image
@@ -32,19 +55,49 @@ const NavBar = () => {
           }
         >
           <ul className={styles.menu}>
-            <li className={styles["menu-item"]}>
+            <li
+              className={
+                scrolled
+                  ? `${styles["menu-item"]} ${styles["menu-item-on-scroll"]}`
+                  : styles["menu-item"]
+              }
+            >
               <Link href="/">Inicio</Link>
             </li>
-            <li className={styles["menu-item"]}>
+            <li
+              className={
+                scrolled
+                  ? `${styles["menu-item"]} ${styles["menu-item-on-scroll"]}`
+                  : styles["menu-item"]
+              }
+            >
               <Link href="/aboutMe">Quién soy</Link>
             </li>
-            <li className={styles["menu-item"]}>
+            <li
+              className={
+                scrolled
+                  ? `${styles["menu-item"]} ${styles["menu-item-on-scroll"]}`
+                  : styles["menu-item"]
+              }
+            >
               <Link href="/portfolio">Portafolio</Link>
             </li>
-            <li className={styles["menu-item"]}>
+            <li
+              className={
+                scrolled
+                  ? `${styles["menu-item"]} ${styles["menu-item-on-scroll"]}`
+                  : styles["menu-item"]
+              }
+            >
               <Link href="/services">Servicios</Link>
             </li>
-            <li className={styles["menu-item"]}>
+            <li
+              className={
+                scrolled
+                  ? `${styles["menu-item"]} ${styles["menu-item-on-scroll"]}`
+                  : styles["menu-item"]
+              }
+            >
               <Link href="/contact">Contacto</Link>
             </li>
           </ul>
